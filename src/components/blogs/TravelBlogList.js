@@ -1,7 +1,7 @@
 import React from 'react';
-import {TravelBlogItem} from './TravelBlogItem';
+import TravelBlogItem from './TravelBlogItem';
 
-import classes from './TravleBlogList.module.css';
+import classes from './TravelBlogList.module.css';
 
 const TravelBlogList = ({blogs}) => {
     return (

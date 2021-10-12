@@ -4,12 +4,12 @@ import { Route, Switch } from "react-router-dom";
 import AllTravelBlogs from "./pages/AllTravelBlogs";
 import NewTravelBlog from "./pages/NewTravelBlog";
 import BucketList from "./pages/BucketList";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from './components/layout/Layout'
 
 const App = () => {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
+      
       <Switch>
         <Route path="/" exact>
           <AllTravelBlogs />
@@ -23,7 +23,7 @@ const App = () => {
           <BucketList />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 };
 
