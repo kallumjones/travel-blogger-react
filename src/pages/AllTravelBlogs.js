@@ -12,7 +12,7 @@ const BLOG_DATA = [
       },
       {
         id: 2,
-        title: "This is my first trip to Marina Bay Sands",
+        title: "This is my second trip to Marina Bay Sands",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Marina_Bay_Sands_in_the_evening_-_20101120.jpg/2560px-Marina_Bay_Sands_in_the_evening_-_20101120.jpg",
         address: "Marina Bay Sands",
@@ -23,9 +23,15 @@ const BLOG_DATA = [
 
 const AllTravelBlogs = () => {
     return (
-        <div>
+        <section>
             <h1>All Travel Blogs</h1>
-        </div>
+
+            <ul>
+                {BLOG_DATA.map((travelBlog) => {
+                    return <li key={travelBlog.id}>{travelBlog.title}</li>
+                })}
+            </ul>
+        </section>
     )
 }
 
