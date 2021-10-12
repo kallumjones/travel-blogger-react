@@ -2,8 +2,7 @@ import {useRef} from 'react';
 import Card from '../ui/Card';
 import classes from './NewTravelBlogForm.module.css';
 
-
-const NewTravelBlogForm = () => {
+const NewTravelBlogForm = ({ onAddTravelBlog }) => {
 
     const titleInputRef = useRef();
     const imageInputRef = useRef();
@@ -30,6 +29,8 @@ const NewTravelBlogForm = () => {
         }
 
         console.log(newTravelBlog);
+
+        onAddTravelBlog(newTravelBlog);
     };
     
 
