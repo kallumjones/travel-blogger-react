@@ -1,18 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { useHistory } from 'react-router-dom';
 import NewTravelBlogForm from '../components/blogs/NewTravelBlogForm'
 
 const NewTravelBlog = () => {
 
+    const history = useHistory();
+
     const addNewTravelblogHandler = (newBlogData) => {
         const apiUrl = process.env.REACT_APP_TRAVEL_DB_URL;
-        console.log(apiUrl);
+        // console.log(apiUrl);
         fetch(apiUrl, {
             method: 'POST',
             body: JSON.stringify(newBlogData),
             headers: {
                 "Content-Type": "application/json"
             }
-        })
+        }).then(() => {
+            history.replace('/');
+        });
+
+
     }
 
     return (
